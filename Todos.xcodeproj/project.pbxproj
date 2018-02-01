@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		388FD20B20235C2300837524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388FD20A20235C2300837524 /* AppDelegate.swift */; };
-		388FD20D20235C2300837524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388FD20C20235C2300837524 /* ViewController.swift */; };
 		388FD21020235C2300837524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388FD20E20235C2300837524 /* Main.storyboard */; };
 		388FD21220235C2300837524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388FD21120235C2300837524 /* Assets.xcassets */; };
 		388FD21520235C2300837524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388FD21320235C2300837524 /* LaunchScreen.storyboard */; };
+		388FD2212023910100837524 /* TodosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388FD2202023910100837524 /* TodosTableViewController.swift */; };
+		388FD2232023911200837524 /* AddTodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388FD2222023911200837524 /* AddTodoTableViewController.swift */; };
+		388FD22520239BCC00837524 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388FD22420239BCC00837524 /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		388FD20720235C2300837524 /* Todos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388FD20A20235C2300837524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		388FD20C20235C2300837524 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		388FD20F20235C2300837524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		388FD21120235C2300837524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		388FD21420235C2300837524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		388FD21620235C2300837524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388FD2202023910100837524 /* TodosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosTableViewController.swift; sourceTree = "<group>"; };
+		388FD2222023911200837524 /* AddTodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddTodoTableViewController.swift; path = Assets.xcassets/AddTodoTableViewController.swift; sourceTree = "<group>"; };
+		388FD22420239BCC00837524 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				388FD20A20235C2300837524 /* AppDelegate.swift */,
-				388FD20C20235C2300837524 /* ViewController.swift */,
 				388FD20E20235C2300837524 /* Main.storyboard */,
+				388FD2202023910100837524 /* TodosTableViewController.swift */,
+				388FD2222023911200837524 /* AddTodoTableViewController.swift */,
 				388FD21120235C2300837524 /* Assets.xcassets */,
 				388FD21320235C2300837524 /* LaunchScreen.storyboard */,
 				388FD21620235C2300837524 /* Info.plist */,
+				388FD22420239BCC00837524 /* Todo.swift */,
 			);
 			path = Todos;
 			sourceTree = "<group>";
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				388FD20D20235C2300837524 /* ViewController.swift in Sources */,
 				388FD20B20235C2300837524 /* AppDelegate.swift in Sources */,
+				388FD2232023911200837524 /* AddTodoTableViewController.swift in Sources */,
+				388FD2212023910100837524 /* TodosTableViewController.swift in Sources */,
+				388FD22520239BCC00837524 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SDQ6PE863;
 				INFOPLIST_FILE = Todos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamstudy.Todos;
@@ -289,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SDQ6PE863;
 				INFOPLIST_FILE = Todos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamstudy.Todos;
