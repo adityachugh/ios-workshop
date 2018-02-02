@@ -10,6 +10,8 @@ import UIKit
 
 class TodosTableViewController: UITableViewController, AddTodoTableViewControllerDelegate {
     
+    @IBOutlet weak var emptyDataLabel: UILabel!
+    
     var todos: [Todo] = [];
     
     override func viewDidLoad() {
@@ -35,8 +37,13 @@ class TodosTableViewController: UITableViewController, AddTodoTableViewControlle
         }
     }
     
+    func displayEmptyDataLabel() {
+        emptyDataLabel.isHidden = todos.count > 0
+    }
+    
     func saveTodo(todo: Todo) {
         todos.append(todo)
+        displayEmptyDataLabel()
         tableView.reloadData()
     }
 
@@ -77,6 +84,7 @@ class TodosTableViewController: UITableViewController, AddTodoTableViewControlle
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             todos.remove(at: indexPath.row)
+            displayEmptyDataLabel()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -84,6 +92,7 @@ class TodosTableViewController: UITableViewController, AddTodoTableViewControlle
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         todos.rearrange(from: fromIndexPath.row, to: to.row)
+        displayEmptyDataLabel()
     }
 
     // Override to support conditional rearranging of the table view.
